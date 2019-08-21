@@ -57,3 +57,13 @@ def default
   end
 
 end
+
+# add to index below :include
+# :user_words => {
+#   :only => [:id, :word_id]
+# },
+
+# add to show below :include 
+# :user_words => {
+#   :only => [:id, :word_id]
+# },

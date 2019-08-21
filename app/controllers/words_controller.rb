@@ -40,8 +40,11 @@ class WordsController < ApplicationController
   end
 
   def destroy
+
     #when clicked on the delete button on wordCard
-    Word.find(params[:id]).destroy
+    @word = Word.find(params[:id])
+    @word.destroy
+    render json: @word
   end
 
 
