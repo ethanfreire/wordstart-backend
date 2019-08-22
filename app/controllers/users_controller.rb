@@ -1,6 +1,7 @@
 require "byebug"
 
 class UsersController < ApplicationController
+  
   def index
     users = User.all
     render json: users.to_json({
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    #by signup you create a new user
+    # by signup you create a new user
     # user = User.create(username: params["username"], password: params["password"])
     user = User.create(user_params)
     user.save!
@@ -63,7 +64,7 @@ end
 #   :only => [:id, :word_id]
 # },
 
-# add to show below :include 
+# add to show below :include
 # :user_words => {
 #   :only => [:id, :word_id]
 # },
