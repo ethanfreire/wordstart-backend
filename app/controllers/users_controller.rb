@@ -1,7 +1,7 @@
 require "byebug"
 
 class UsersController < ApplicationController
-  
+
   def index
     users = User.all
     render json: users.to_json({
@@ -58,13 +58,3 @@ def default
   end
 
 end
-
-# add to index below :include
-# :user_words => {
-#   :only => [:id, :word_id]
-# },
-
-# add to show below :include
-# :user_words => {
-#   :only => [:id, :word_id]
-# },

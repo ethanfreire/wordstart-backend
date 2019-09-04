@@ -12,7 +12,4 @@ private
   def userword_params
     params.permit(:user_id, :word_id, :activeword)
   end
-
-
-
 end
